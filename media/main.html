@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Главная страница</title>
+        <link rel="stylesheet" href="media/style.css" />
+    </head>
+    <body>
+        <header class="headerBlogs">
+        <p>БЛОГИ</p>
+        <button onclick="createNewBlog()" class="button_CreateBlog">
+            + Новый блог
+        </button>
+        </header>
+
+        <main style="padding: 20px; font-family: sans-serif;">
+            <h2>Список блогов:</h2>
+            <ul>
+                {blogs}
+            </ul>
+        </main>
+
+        <div class="DarkBackground">
+        <div class="FormBlog">
+            <form action="/" method="post">
+                <p class="form_box">
+                    <label for="title">Заголовок блога:</label>
+                    <input type="text" name="title" id="title" required />
+                </p>
+                <p class="form_box">
+                    <label for="content">Описание:</label>
+                    <textarea
+                    id="content"
+                    name="content"
+                    style="font-size: 14px; height: 100px; width: 300px"
+                    ></textarea>
+                </p>
+                <p class="form_box">
+                    <label for="author">Автор:</label>
+                    <input type="text" name="author" id="author" required />
+                </p>
+                <button type="submit">Отправить</button>
+                <button onclick="closeForm()">Отмена</button>
+ 
+            </form>
+        </div>
+        </div>
+        <script src="media/main.js"></script>
+    </body>
+    </html>
